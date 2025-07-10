@@ -1,5 +1,5 @@
 <h2 align="center">Hey, I'm Aya Mouate ✨</h2>
-# 🌸 About Me
+# 🌸 About Me<br>
 👩‍💻 Computer Science student at UCA<br/>
 🔐 Passionate about **cybersecurity**, **tech ethics**, and **web apps**<br/>
 ⚒️ Building personal projects to level up my skills<br/>
