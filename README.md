@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://badge.mediaplus.ma/greenbinary/aymouate">
+</p>
+
 <h2 align="center">Hey, I'm Aya Mouate ✨</h2>
 # 🌸 About Me<br>
 👩‍💻 Computer Science student at UCA<br/>
