@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://badge.mediaplus.ma/greenbinary/aymouate">
+  <img src="https://badge.mediaplus.ma/binary/aymouate" alt="aymouate's 42 stats">
 </p>
 
 <h2 align="center">Hey, I'm Aya Mouate ✨</h2>
