@@ -1,15 +1,32 @@
 <p align="center">
-  <img src="https://badge.mediaplus.ma/binary/aymouate" alt="Aya Mouate's 42 stats"/>
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&color=0:ffb6d9,50:d98eff,100:8c52ff&height=220&section=header&text=Hey,%20I'm%20Aya%20Mouate%20✨&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Computer%20Science%20Student%20•%20Builder%20•%20Curious%20Mind&descAlignY=55&descSize=17"
+    width="100%."
+  />
 </p>
 
-<h1 align="center">Hi, I'm Aya Mouate ✨</h1>
+
+<!-- ===================== 42 BADGE ===================== -->
 
 <p align="center">
-  Computer Science Student @ 1337 & UCA
-  <br/>
-  Systems Programming • Cybersecurity • Algorithms
+  <img
+    src="https://badge.mediaplus.ma/binary/aymouate"
+    alt="aymouate's 42 stats"
+  />
 </p>
 
+
+<!-- ===================== INTRO ===================== -->
+
+<h3 align="center">
+  👩‍💻 Computer Science Student @ 1337 & UCA
+</h3>
+
+<p align="center">
+  <i>
+    Exploring systems, cybersecurity, algorithms and the magic behind how things work.
+  </i>
+</p>
 ---
 
 ## 🌸 About Me
@@ -22,42 +39,7 @@
 
 ---
 
-## 🛠️ Tech Stack
 
-### Languages
-
-![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-
-### Tools & Technologies
-
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square&logo=gnu-bash&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
-![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
-
----
-
-## 📊 GitHub Stats
-
-<p align="center">
-  <img height="165"
-       src="https://github-readme-stats.vercel.app/api?username=Ayamouate&theme=radical&hide_border=true&show_icons=true"/>
-  <img height="165"
-       src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ayamouate&theme=radical&hide_border=true&layout=compact"/>
-</p>
-
-<p align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Ayamouate&theme=radical&hide_border=true"/>
-</p>
-
----
 
 <p align="center">
   <i>Always learning. Always building. 🌸</i>
