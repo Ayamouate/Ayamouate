@@ -1,23 +1,64 @@
 <p align="center">
-  <img src="https://badge.mediaplus.ma/binary/aymouate" alt="aymouate's 42 stats">
+  <img src="https://badge.mediaplus.ma/binary/aymouate" alt="Aya Mouate's 42 stats"/>
 </p>
 
-<h2 align="center">Hey, I'm Aya Mouate ✨</h2>
-# 🌸 About Me<br>
-👩‍💻 Computer Science student at 1337 & UCA<br/>
-🔐 Passionate about **cybersecurity**, **tech ethics**, and **web apps**<br/>
-⚒️ Building personal projects to level up my skills<br/>
-🚀 Always learning, creating, and pushing my limits<br/>
-✨ Personal motto: “Dream big. Work smart. Stay kind.”<br/>
+<h1 align="center">Hi, I'm Aya Mouate ✨</h1>
 
-# 💻 Tech Stack:
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=for-the-badge&logo=latex&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white) ![Bash Script](https://img.shields.io/badge/bash_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Cisco](https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black) ![nVIDIA](https://img.shields.io/badge/nVIDIA-%2376B900.svg?style=for-the-badge&logo=nVIDIA&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Ayamouate&theme=radical&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Ayamouate&theme=radical&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Ayamouate&theme=radical&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
- 
+<p align="center">
+  Computer Science Student @ 1337 & UCA
+  <br/>
+  Systems Programming • Cybersecurity • Algorithms
+</p>
+
 ---
-[![](https://visitcount.itsvg.in/api?id=Ayamouate&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+## 🌸 About Me
+
+- 🎓 Computer Science student at **1337 (42 Network)** & **UCA**
+- 💻 Interested in **systems programming, cybersecurity & web technologies**
+- 🧠 I enjoy solving algorithmic and optimization problems
+- 🚀 Building projects that push me beyond my comfort zone
+- ✨ *Dream big. Work smart. Stay kind.*
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+
+![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=flat-square&logo=javascript&logoColor=F7DF1E)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+
+### Tools & Technologies
+
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square&logo=gnu-bash&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img height="165"
+       src="https://github-readme-stats.vercel.app/api?username=Ayamouate&theme=radical&hide_border=true&show_icons=true"/>
+  <img height="165"
+       src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ayamouate&theme=radical&hide_border=true&layout=compact"/>
+</p>
+
+<p align="center">
+  <img src="https://nirzak-streak-stats.vercel.app/?user=Ayamouate&theme=radical&hide_border=true"/>
+</p>
+
+---
+
+<p align="center">
+  <i>Always learning. Always building. 🌸</i>
+</p>
