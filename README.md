@@ -82,6 +82,20 @@
      alt="Canva"/>
 </p>
 
+
+<h2>📊 GitHub Stats</h2>
+
+<p align="center">
+  <img
+    src="https://github-readme-stats.shion.dev/api?username=Ayamouate&theme=dark&hide_border=false&include_all_commits=false&count_private=false"
+    height="180"
+  />
+  <img
+    src="https://github-readme-stats.shion.dev/api/top-langs/?username=Ayamouate&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact"
+    height="180"
+  />
+</p>
+
 </br>
 <p align="center"><i>Always learning. Always building. 🌸</i></p>
 <br/>
