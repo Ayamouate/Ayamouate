@@ -108,3 +108,20 @@
   width="100%"
   src="https://capsule-render.vercel.app/api?type=waving&color=0:ffb6d9,50:d98eff,100:8c52ff&height=150&section=footer&animation=fadeIn"
 />
+
+<p align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/Ayamouate/Ayamouate/output/github-snake-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/Ayamouate/Ayamouate/output/github-snake.svg"
+    />
+    <img
+      alt="GitHub contribution snake"
+      src="https://raw.githubusercontent.com/Ayamouate/Ayamouate/output/github-snake.svg"
+    />
+  </picture>
+</p>
