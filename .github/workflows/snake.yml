@@ -1,1 +1,49 @@
 
+name: GitHub Snake Game
+
+on:
+  # Run every day at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+
+  # Allow manual execution from the Actions tab
+  workflow_dispatch:
+
+  # Run whenever you push to main
+  push:
+    branches:
+      - main
+
+# Needed so the workflow can push to the output branch
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      # Checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Generate contribution snake
+      - name: Generate GitHub Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+
+      # Push generated files to output branch
+      - name: Deploy to Output Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          full_commit_message: "Update snake animation [skip ci]"
