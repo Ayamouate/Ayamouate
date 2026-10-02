@@ -1,0 +1,12 @@
+{
+  "title": "Skill Radar",
+  "_comment": "Self-rated, 0-100. Placeholder values - edit these to your real level and the Charts workflow redraws the radar.",
+  "axes": [
+    { "label": "Systems Programming", "value": 80 },
+    { "label": "AI",                  "value": 70 },
+    { "label": "Web Technologies",    "value": 75 },
+    { "label": "Algorithms",          "value": 82 },
+    { "label": "Optimization",        "value": 78 },
+    { "label": "Linux / Shell",       "value": 76 }
+  ]
+}

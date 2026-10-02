@@ -1,0 +1,14 @@
+{
+  "title": "Language Stack",
+  "_comment": "Hand-authored language radar. Placeholder values 0-100 - edit these and the Charts workflow redraws it.",
+  "axes": [
+    { "label": "C",          "value": 85 },
+    { "label": "C++",        "value": 75 },
+    { "label": "Java",       "value": 65 },
+    { "label": "Python",     "value": 78 },
+    { "label": "JavaScript", "value": 70 },
+    { "label": "PHP",        "value": 60 },
+    { "label": "SQL",        "value": 65 },
+    { "label": "Bash",       "value": 72 }
+  ]
+}

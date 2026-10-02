@@ -1,0 +1,4 @@
+{
+  "_comment": "Featured repos for scripts/cards.py. Add entries like {\"repo\": \"my-repo\", \"description\": \"...\"} and it draws a card per repo (not shown in the README by default).",
+  "projects": []
+}
