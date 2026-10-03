@@ -167,39 +167,64 @@ def floyd_steinberg(gray: np.ndarray) -> np.ndarray:
     return out
 
 
+def fit_portrait(source: Image.Image) -> Image.Image:
+    """Auto-crop ANY photo to the 300x340 frame (head + shoulders, upper-centred)."""
+    source = ImageOps.exif_transpose(source).convert("RGBA")  # fix phone rotation
+    w, h = source.size
+    ratio = 300 / 340
+    if w / h > ratio:                      # wider than the frame: crop the sides
+        cw, ch = int(h * ratio), h
+        x0, y0 = (w - cw) // 2, 0
+    else:                                  # taller than the frame: crop, keep the top
+        cw, ch = w, int(w / ratio)
+        x0, y0 = 0, int((h - ch) * 0.18)
+    crop = source.crop((x0, y0, x0 + cw, y0 + ch))
+    return crop.resize((300, 340), Image.Resampling.LANCZOS)
+
+
+def feather_mask(size=(300, 340)) -> np.ndarray:
+    """Soft oval (1 in the middle, 0 at the edges) so the photo's background fades out."""
+    yy, xx = np.mgrid[0 : size[1], 0 : size[0]].astype(np.float32)
+    dx = (xx - size[0] / 2) / (size[0] * 0.50)
+    dy = (yy - size[1] * 0.50) / (size[1] * 0.52)
+    r = np.sqrt(dx * dx + dy * dy)
+    return np.clip((1.0 - r) / 0.28, 0.0, 1.0)
+
+
 def portrait_points(theme: str, rng: np.random.Generator) -> np.ndarray:
     """Return sampled x/y banner coordinates from a 300x340 dither grid."""
-    source = (Image.open(SOURCE) if SOURCE.exists() else fallback_portrait()).convert("RGBA")
-    # Tighter head + shoulders crop so face detail fills the VISUAL.MAP frame.
-    crop = source.crop((18, 28, 390, 450)).resize((300, 340), Image.Resampling.LANCZOS)
-    rgb = crop.convert("RGB")
+    source = Image.open(SOURCE) if SOURCE.exists() else fallback_portrait()
+    crop = fit_portrait(source)
     alpha = np.asarray(crop.getchannel("A"), dtype=np.float32) / 255.0
+    fade = feather_mask()
+
+    white = Image.new("RGBA", crop.size, "white")
+    white.alpha_composite(crop)
+    gray = np.asarray(ImageOps.grayscale(white.convert("RGB")), dtype=np.float32)
+
+    # Local contrast first (CLAHE-like via autocontrast on the oval), so the face
+    # keeps detail instead of the whole frame going white or black.
+    base = Image.fromarray(np.uint8(gray), "L")
+    base = ImageOps.autocontrast(base, cutoff=2)
+    base = ImageEnhance.Contrast(base).enhance(1.25)
+    base = base.filter(ImageFilter.UnsharpMask(radius=2, percent=160, threshold=1))
+    gray = np.asarray(base, dtype=np.float32)
 
     if theme == "dark":
-        lum = np.asarray(ImageOps.grayscale(rgb), dtype=np.float32)
-        prepared = Image.fromarray(np.uint8(np.clip(lum * alpha, 0, 255)), "L")
+        gray = 255.0 * np.power(np.clip(gray, 0, 255) / 255.0, 0.72)  # lift dark hair/clothes
+        # lit pixels = bright parts of the photo, faded to nothing at the oval edge
+        prepared = Image.fromarray(np.uint8(np.clip(gray * alpha * fade, 0, 255)), "L")
         select_lit = True
     else:
-        white = Image.new("RGBA", crop.size, "white")
-        white.alpha_composite(crop)
-        prepared = ImageOps.grayscale(white.convert("RGB"))
+        # dark pixels = dark parts of the photo, faded to white at the oval edge
+        faded = 255 - (255 - gray) * (alpha * fade)
+        prepared = Image.fromarray(np.uint8(np.clip(faded, 0, 255)), "L")
         select_lit = False
 
-    # Equalize against the subject only (ignore empty alpha) so lit skin vs dark
-    # hair doesn't crush midtones; then punch local contrast for facial edges.
-    if theme == "dark":
-        mask = Image.fromarray(np.uint8((alpha > 0.08) * 255), "L")
-        prepared = ImageOps.equalize(prepared, mask=mask)
-    else:
-        prepared = ImageOps.autocontrast(prepared, cutoff=1)
-    prepared = ImageEnhance.Contrast(prepared).enhance(1.35)
-    prepared = prepared.filter(ImageFilter.UnsharpMask(radius=2, percent=175, threshold=1))
     bits = floyd_steinberg(np.asarray(prepared))
     active = bits if select_lit else ~bits
-    if theme == "dark":
-        active &= alpha > 0.08
+    active &= (alpha * fade) > 0.06
 
-    # Keep the full 300×340 lattice — skipping 2×2 cells was the soft/blurry look.
     ys, xs = np.where(active)
     if len(xs) == 0:
         return np.zeros((0, 2), dtype=np.float32)
