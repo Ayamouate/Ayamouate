@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="215" viewBox="0 0 480 215" role="img" aria-labelledby="t">
+<title id="t">Most used languages</title>
+<style>
+  .bg    { fill:#0d1117; stroke:#30363d; }
+  .title { font-size:15px; font-weight:700; fill:#d98eff; letter-spacing:.5px; }
+  .sub   { font-size:11px; fill:#8b949e; }
+  .lang  { font-size:12px; fill:#e6edf3; }
+  .pct   { font-size:12px; fill:#8b949e; }
+  text   { font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+  @media (prefers-color-scheme: light) {
+    .bg    { fill:#ffffff; stroke:#d0d7de; }
+    .title { fill:#8c52ff; }
+    .sub, .pct { fill:#656d76; }
+    .lang  { fill:#1f2328; }
+  }
+</style>
+<defs><clipPath id="bar"><rect x="28" y="62" width="424" height="12" rx="6"/></clipPath></defs>
+<rect x=".5" y=".5" width="479" height="214" rx="12" class="bg"/>
+<text x="28" y="34" class="title">MOST USED LANGUAGES</text>
+<text x="28" y="50" class="sub">by bytes of code across public repositories</text>
+<g clip-path="url(#bar)">
+<rect x="28.00" y="62" width="222.71" height="12" fill="#7d8590"/>
+<rect x="250.71" y="62" width="181.29" height="12" fill="#3572A5"/>
+<rect x="432.00" y="62" width="14.96" height="12" fill="#f34b7d"/>
+<rect x="446.96" y="62" width="4.61" height="12" fill="#6aa84f"/>
+<rect x="451.57" y="62" width="1.50" height="12" fill="#89e051"/>
+</g>
+<circle cx="33.0" cy="100" r="5" fill="#7d8590"/><text x="45.0" y="104" class="lang">C</text><text x="222.0" y="104" class="pct" text-anchor="end">52.5%</text>
+<circle cx="33.0" cy="121" r="5" fill="#3572A5"/><text x="45.0" y="125" class="lang">Python</text><text x="222.0" y="125" class="pct" text-anchor="end">42.8%</text>
+<circle cx="33.0" cy="142" r="5" fill="#f34b7d"/><text x="45.0" y="146" class="lang">C++</text><text x="222.0" y="146" class="pct" text-anchor="end">3.5%</text>
+<circle cx="33.0" cy="163" r="5" fill="#6aa84f"/><text x="45.0" y="167" class="lang">Makefile</text><text x="222.0" y="167" class="pct" text-anchor="end">1.1%</text>
+<circle cx="33.0" cy="184" r="5" fill="#89e051"/><text x="45.0" y="188" class="lang">Shell</text><text x="222.0" y="188" class="pct" text-anchor="end">0.1%</text>
+</svg>
