@@ -85,11 +85,20 @@ def icon(path, x, y, size, fill):
 
 
 def rest(path: str, token: str | None):
-    req = urllib.request.Request("https://api.github.com" + path, headers=dict(UA))
-    if token:
-        req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read().decode())
+    def request(auth_token: str | None):
+        req = urllib.request.Request("https://api.github.com" + path, headers=dict(UA))
+        if auth_token:
+            req.add_header("Authorization", f"******")
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read().decode())
+
+    try:
+        return request(token)
+    except urllib.error.HTTPError as e:
+        if token and e.code in (401, 403):
+            print("  token rejected for REST API; retrying without token", file=sys.stderr)
+            return request(None)
+        raise
 
 
 def graphql(query: str, variables: dict, token: str):
