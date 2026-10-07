@@ -119,6 +119,12 @@ def fetch_contributions(user: str, token: str | None):
     """Return (total, current_streak, longest_streak) or None without a token."""
     if not token:
         return None
+    if token.startswith("ghs_"):
+        # Built-in Actions token: it cannot see private contributions, so the
+        # total comes out far lower than the profile graph (e.g. 46 vs 330).
+        print("::warning::Using the built-in GITHUB_TOKEN - private contributions are "
+              "NOT counted. Add a METRICS_TOKEN secret (classic PAT, read:user) "
+              "to match the profile graph.", file=sys.stderr)
     try:
         data = graphql(CONTRIB_QUERY, {"login": user}, token)
     except urllib.error.HTTPError as e:
