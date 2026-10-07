@@ -104,7 +104,7 @@ def graphql(query: str, variables: dict, token: str):
 CONTRIB_QUERY = """
 query($login:String!){
   user(login:$login){
-    contributionsCollection(includePrivateContributions:true){
+    contributionsCollection{
       contributionCalendar{
         totalContributions
         weeks{ contributionDays{ date contributionCount } }
