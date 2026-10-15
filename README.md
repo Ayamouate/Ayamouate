@@ -41,7 +41,7 @@
 
 ### 👩‍💻 Computer Science Student @ 1337 & UCA
 
-*Exploring systems, AI, algorithms and the magic behind how things work.*
+*Exploring systems, AI, algorithms, and the magic behind how things work.*
 
 - 🎓 Computer Science student at **1337 (42 Network)** & **UCA**
 - 💻 Interested in **systems programming, AI & web technologies**
@@ -53,7 +53,7 @@
 
 <div align="center">
 
-## my perfect stack
+## My perfect stack
 
 ### Languages
 
@@ -131,7 +131,7 @@
 
 <div align="center">
 
-<i>Always learning . Always building</i>
+<i>Always learning. Always building</i>
 
 <br><br>
 
