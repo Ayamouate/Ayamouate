@@ -88,8 +88,13 @@ def rest(path: str, token: str | None):
     req = urllib.request.Request("https://api.github.com" + path, headers=dict(UA))
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return json.loads(r.read().decode())
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        if token and e.code in (401, 403):
+            return rest(path, None)
+        raise
 
 
 def graphql(query: str, variables: dict, token: str):
